@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Impacto de la Antropología en la Psicología</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-box {
+            border: 2px solid;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        .flow-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body class="text-[#05445E]">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#05445E] mb-2">Un Diálogo Interdisciplinario</h1>
+            <p class="text-xl md:text-2xl text-[#189AB4]">El Impacto Fundamental de la Antropología en la Psicología</p>
+        </header>
+
+        <section class="bg-white rounded-lg shadow-xl p-6 md:p-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-[#F26419] mb-4">El Problema del Etnocentrismo</h2>
+                    <p class="text-lg">La psicología ha universalizado históricamente sus hallazgos desde una perspectiva occidental, asumiendo la experiencia humana como homogénea. Esto crea un sesgo significativo, ya que la gran mayoría de la investigación se basa en una pequeña y poco representativa porción de la población mundial. La Antropología ofrece el contexto cultural para construir una ciencia del comportamiento verdaderamente global.</p>
+                </div>
+                <div>
+                    <div class="chart-container">
+                        <canvas id="weirdChart"></canvas>
+                    </div>
+                     <p class="text-center text-sm text-gray-500 mt-2">Proporción de estudios psicológicos basados en poblaciones "WEIRD".</p>
+                </div>
+            </div>
+        </section>
+
+        <main class="space-y-12">
+            
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center"><span class="text-[#F26419]">1.</span> La Cultura como Matriz de la Subjetividad</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <h4 class="font-bold text-xl mb-4 text-[#189AB4]">"Yo Independiente" (Individualista)</h4>
+                        <div class="flex justify-center items-center p-4">
+                            <div class="relative flex justify-center items-center">
+                                <div class="w-24 h-24 rounded-full bg-[#75E6DA] flex justify-center items-center font-bold text-2xl">YO</div>
+                                <div class="absolute top-[-40px] w-20 h-20 rounded-full bg-blue-100 flex justify-center items-center font-semibold">Amigos</div>
+                                <div class="absolute left-[-60px] w-20 h-20 rounded-full bg-blue-100 flex justify-center items-center font-semibold">Familia</div>
+                                <div class="absolute right-[-60px] w-20 h-20 rounded-full bg-blue-100 flex justify-center items-center font-semibold">Trabajo</div>
+                                <div class="absolute bottom-[-40px] w-20 h-20 rounded-full bg-blue-100 flex justify-center items-center font-semibold">Metas</div>
+                            </div>
+                        </div>
+                        <p class="mt-12">El "self" se define por atributos internos y únicos. La identidad es autónoma y separada de los demás.</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-bold text-xl mb-4 text-[#189AB4]">"Yo Interdependiente" (Colectivista)</h4>
+                        <div class="flex justify-center items-center p-4">
+                            <div class="relative w-48 h-48">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[#75E6DA] flex justify-center items-center font-bold text-2xl z-10">YO</div>
+                                <div class="absolute top-0 left-8 w-20 h-20 rounded-full bg-blue-200/80 flex justify-center items-center font-semibold">Amigos</div>
+                                <div class="absolute top-8 left-[-20px] w-20 h-20 rounded-full bg-blue-200/80 flex justify-center items-center font-semibold">Familia</div>
+                                <div class="absolute top-8 right-[-20px] w-20 h-20 rounded-full bg-blue-200/80 flex justify-center items-center font-semibold">Comunidad</div>
+                                <div class="absolute bottom-0 left-8 w-20 h-20 rounded-full bg-blue-200/80 flex justify-center items-center font-semibold">Roles</div>
+                            </div>
+                        </div>
+                        <p class="mt-4">El "self" se define por sus relaciones y roles sociales. La identidad está conectada e integrada en el grupo.</p>
+                    </div>
+                </div>
+                 <p class="mt-6 text-center text-lg">La percepción del "yo" no es universal; está moldeada por la cultura, lo que tiene profundas implicaciones para la terapia y el diagnóstico de la salud mental.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                 <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center"><span class="text-[#F26419]">2.</span> El Ciclo Vital como Constructo Sociocultural</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h4 class="font-bold text-xl mb-4 text-center text-[#189AB4]">Modelo Lineal Occidental</h4>
+                        <div class="relative pl-8 border-l-4 border-[#75E6DA]">
+                            <div class="mb-8 ml-4">
+                                <div class="absolute -left-4 w-8 h-8 bg-[#05445E] rounded-full"></div>
+                                <h5 class="font-bold">Infancia</h5>
+                                <p>Etapa de dependencia y aprendizaje.</p>
+                            </div>
+                            <div class="mb-8 ml-4">
+                                <div class="absolute -left-4 w-8 h-8 bg-[#05445E] rounded-full"></div>
+                                <h5 class="font-bold">Adolescencia</h5>
+                                <p>Periodo de "crisis" y búsqueda de identidad.</p>
+                            </div>
+                             <div class="ml-4">
+                                <div class="absolute -left-4 w-8 h-8 bg-[#05445E] rounded-full"></div>
+                                <h5 class="font-bold">Adultez</h5>
+                                <p>Autonomía y realización personal.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-xl mb-4 text-center text-[#189AB4]">Modelo Comunitario Integrado</h4>
+                         <div class="relative pl-8 border-l-4 border-[#75E6DA]">
+                             <div class="mb-8 ml-4">
+                                <div class="absolute -left-4 w-8 h-8 bg-[#F26419] rounded-full"></div>
+                                <h5 class="font-bold">Aprendizaje Comunitario</h5>
+                                <p>La niñez se integra en la vida social y productiva.</p>
+                            </div>
+                            <div class="mb-8 ml-4">
+                                <div class="absolute -left-4 w-8 h-8 bg-[#F26419] rounded-full"></div>
+                                <h5 class="font-bold">Rito de Paso</h5>
+                                <p>Transición guiada y celebrada por la comunidad.</p>
+                            </div>
+                             <div class="ml-4">
+                                <div class="absolute -left-4 w-8 h-8 bg-[#F26419] rounded-full"></div>
+                                <h5 class="font-bold">Adultez Contributiva</h5>
+                                <p>El rol y la responsabilidad definen el estatus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <p class="mt-8 text-center text-lg">Las etapas de la vida no son universales. La "adolescencia" como crisis es una construcción cultural, no una ley biológica.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-center"><span class="text-[#F26419]">3.</span> Filogénesis y Comportamiento</h3>
+                    <p class="mb-4">Nuestro cerebro evolucionó en un entorno de cazadores-recolectores, creando predisposiciones biológicas. Sin embargo, la cultura actúa como el principal modulador de cómo se expresan estos legados evolutivos.</p>
+                    <div class="chart-container h-64 md:h-72">
+                         <canvas id="evolutionChart"></canvas>
+                    </div>
+                     <p class="text-center text-sm text-gray-500 mt-2">La cultura media entre la predisposición evolutiva y el comportamiento moderno.</p>
+                </div>
+
+                 <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-center"><span class="text-[#F26419]">4.</span> El Lenguaje como Arquitectura del Pensamiento</h3>
+                    <p class="mb-4">El lenguaje no solo describe la realidad, sino que la construye. Las categorías que nos ofrece un idioma influyen en nuestra percepción, memoria y hasta en nuestra orientación espacial.</p>
+                     <div class="chart-container h-64 md:h-72">
+                         <canvas id="languageChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-2">Influencia del lenguaje en dominios cognitivos.</p>
+                </div>
+            </div>
+
+             <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center"><span class="text-[#F26419]">5.</span> La Etnografía como Puente Metodológico</h3>
+                <p class="text-center text-lg mb-8 max-w-3xl mx-auto">La antropología ofrece a la psicología un método para comprender la experiencia humana "desde adentro" (emic), contrastando con la perspectiva "desde afuera" (etic) que impone categorías predefinidas.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-xl mb-4 text-center text-[#189AB4]">Perspectiva Etic (Psicología Tradicional)</h4>
+                        <div class="space-y-4">
+                            <div class="flow-box border-blue-300 text-blue-800 bg-blue-50">Observador Externo</div>
+                            <div class="text-center text-3xl text-blue-400">↓</div>
+                            <div class="flow-box border-blue-300 text-blue-800 bg-blue-50">Cuestionario Estandarizado</div>
+                            <div class="text-center text-3xl text-blue-400">↓</div>
+                            <div class="flow-box border-red-300 text-red-800 bg-red-50">Datos Descontextualizados</div>
+                        </div>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-xl mb-4 text-center text-[#189AB4]">Perspectiva Emic (Enfoque Etnográfico)</h4>
+                        <div class="space-y-4">
+                            <div class="flow-box border-teal-300 text-teal-800 bg-teal-50">Inmersión Cultural</div>
+                            <div class="text-center text-3xl text-teal-400">⇅</div>
+                            <div class="flow-box border-teal-300 text-teal-800 bg-teal-50">Observación Participante</div>
+                            <div class="text-center text-3xl text-teal-400">↓</div>
+                            <div class="flow-box border-green-300 text-green-800 bg-green-50">Comprensión Profunda</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class="text-center mt-12 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-[#05445E] mb-4">Hacia una Psicología Culturalmente Situada</h2>
+            <p class="text-lg max-w-4xl mx-auto text-[#189AB4]">La aportación de la antropología es un desafío epistemológico. Obliga a la psicología a cuestionar sus supuestos de universalidad y a desarrollar métodos sensibles al contexto. La psicología del futuro, para ser relevante y ética, debe estudiar las múltiples y diversas "formas de ser humano" que la cultura hace posibles.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+        
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) lines.push(currentLine);
+            return lines;
+        };
+
+        const weirdChartCtx = document.getElementById('weirdChart').getContext('2d');
+        new Chart(weirdChartCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Poblaciones WEIRD (Occidentales, Educadas, Industrializadas, Ricas, Democráticas)', 'Resto del Mundo'],
+                datasets: [{
+                    label: 'Estudios Psicológicos',
+                    data: [80, 20],
+                    backgroundColor: ['#F26419', '#189AB4'],
+                    borderColor: '#F8F9FA',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    ...tooltipTitleCallback.plugins
+                }
+            }
+        });
+
+        const evolutionChartCtx = document.getElementById('evolutionChart').getContext('2d');
+        new Chart(evolutionChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Búsqueda de Estatus', 'Cooperación en Grupo', 'Apego Parental'],
+                datasets: [
+                    {
+                        label: 'Predisposición Evolutiva',
+                        data: [90, 85, 95],
+                        backgroundColor: '#75E6DA',
+                    },
+                    {
+                        label: 'Expresión Cultural Moderna',
+                        data: [70, 60, 80],
+                        backgroundColor: '#189AB4',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { display: false }
+                    }
+                },
+                ...tooltipTitleCallback
+            }
+        });
+        
+        const languageChartCtx = document.getElementById('languageChart').getContext('2d');
+        new Chart(languageChartCtx, {
+            type: 'polarArea',
+            data: {
+                labels: ['Orientación Espacial', 'Percepción del Color', 'Léxico Emocional', 'Concepto del Tiempo'],
+                datasets: [{
+                    label: 'Influencia del Lenguaje',
+                    data: [9, 7, 8, 6],
+                    backgroundColor: [
+                        'rgba(242, 100, 25, 0.7)',
+                        'rgba(24, 154, 180, 0.7)',
+                        'rgba(117, 230, 218, 0.7)',
+                        'rgba(5, 68, 94, 0.7)',
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                ...tooltipTitleCallback
+            }
+        });
+
+    </script>
+</body>
+</html>
+
